@@ -1,6 +1,9 @@
 # AZMusicAPI
 轻松访问音乐信息和歌曲音频链接 | Easy access to music information and song audio links
 
+# AZ Studio版权所有
+# 该项目仅供娱乐 请勿用于违法事业 违者与AZ Studio无关
+
 # 安装
 
 ```pip install AZMusicAPI```
