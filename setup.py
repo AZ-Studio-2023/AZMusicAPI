@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='AZMusicAPI',
-    version='0.9.8',
+    version='1.4.6',
     author='AZ Studio',
     description='轻松访问音乐信息和歌曲音频链接 | Easy access to music information and song audio links',
     long_description = open('readme.md', encoding='utf-8').read(),
