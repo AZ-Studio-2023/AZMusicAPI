@@ -1,0 +1,7 @@
+setup.py
+MusicAPI/AZMusicAPI.py
+MusicAPI/__init__.py
+MusicAPI.egg-info/PKG-INFO
+MusicAPI.egg-info/SOURCES.txt
+MusicAPI.egg-info/dependency_links.txt
+MusicAPI.egg-info/top_level.txt
