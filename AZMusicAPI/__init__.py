@@ -17,7 +17,7 @@ def getmusic(keyword, api, cookie="", number=20, server="ncma"):
         search_data = {"keywords": keyword}
         if len(keyword) > 0:
             try:
-                response_data = requests.get(search_url, params=search_data, timeout=20, cookie=cookie).json()
+                response_data = requests.get(search_url, params=search_data, timeout=20, headers=headers).json()
             except:
                 return "NetworkError"
             songs_data = response_data['result']['songs']
@@ -47,7 +47,7 @@ def getmusic(keyword, api, cookie="", number=20, server="ncma"):
             return "Error 1"
         search_data = {"key": keyword, "pageSize": number}
         try:
-            data = requests.get(search_url, params=search_data, timeout=20, headers=headers).json()
+            data = requests.get(search_url, params=search_data, timeout=20).json()
         except:
             return "NetworkError"
         if data["result"] != 100:
@@ -89,7 +89,7 @@ def geturl(id, api, cookie="", server="ncma"):
         search_url = api + "song/urls"
         search_data = {"id": id}
         try:
-            response_data = requests.get(search_url, params=search_data, headers=headers).json()
+            response_data = requests.get(search_url, params=search_data).json()
         except:
             return "NetworkError"
         if response_data["result"] != 100:
