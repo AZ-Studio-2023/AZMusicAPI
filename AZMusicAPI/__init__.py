@@ -66,16 +66,16 @@ def getmusic(keyword, api, cookie="", number=20, server="ncma"):
         return data_r
 
 
-def geturl(id, api, cookie="", server="ncma"):
+def geturl(id, api, cookie="", server="ncma", level="standard"):
     # 获取音乐的音频地址
-    # id:歌曲的id值  api:自行部署neteasecloudmusicapi的地址
+    # id:歌曲的id值 level:返回音频的音质，仅NCMA api:自行部署neteasecloudmusicapi的地址
     # 返回值：正常:返回音频链接  "Error 3":id不正确或无版权  "Error 4":获取链接失败，建议检查是否登录
     headers = {
         'Cookie': cookie
     }
     if server == "ncma":
         search_url = api + "song/url"
-        search_data = {"id": id}
+        search_data = {"id": id, "level": level}
         try:
             response_data = requests.get(search_url, params=search_data, headers=headers).json()
         except:
