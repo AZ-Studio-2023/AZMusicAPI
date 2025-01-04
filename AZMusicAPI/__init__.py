@@ -74,7 +74,7 @@ def geturl(id, api, cookie="", server="ncma", level="standard"):
         'Cookie': cookie
     }
     if server == "ncma":
-        search_url = api + "song/url"
+        search_url = api + "song/url/v1"
         search_data = {"id": id, "level": level}
         try:
             response_data = requests.get(search_url, params=search_data, headers=headers).json()
